@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Survey Form</h1>
+    <form id="surveyForm" onsubmit="return submitForm();">
+        <div class="input-container">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" required><br><br>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" required><br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required><br><br>
+
+            <label for="country">Country:</label>
+            <select id="country" required>
+                <option value="INDIA">INDIA</option>
+                <option value="Canada">Canada</option>
+                <option value="UK">UK</option>
+            </select><br><br>
+
+            <label>Gender:</label>
+            <input type="checkbox" id="male"> Male
+            <input type="checkbox" id="female"> Female<br><br>
+
+            <label for="profession">Profession:</label>
+            <input type="text" id="profession" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br><br>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" pattern="[0-9]{10}" required><br><br>
+
+            <button type="submit">Submit</button>
+            <button type="button" onclick="resetForm()">Reset</button>
+        </div>
+    </form>
+
+    <div id="popup" style="display: none;">
+        <h2>Survey Results</h2>
+        <p>First Name: <span id="popupFirstName"></span></p>
+        <p>Last Name: <span id="popupLastName"></span></p>
+        <p>Date of Birth: <span id="popupDob"></span></p>
+        <p>Country: <span id="popupCountry"></span></p>
+        <p>Gender: <span id="popupGender"></span></p>
+        <p>Profession: <span id="popupProfession"></span></p>
+        <p>Email: <span id="popupEmail"></span></p>
+        <p>Mobile Number: <span id="popupMobile"></span></p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+</body>
+</html>
+
+        
